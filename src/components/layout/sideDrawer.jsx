@@ -9,8 +9,28 @@ const SideDrawer = props => {
       onClose={() => props.onClose(false)}
     >
       <List component='nav'>
-        <ListItem button onClick={() => console.log("list item clicked")}>
-          Item 1
+        <ListItem button onClick={() => console.log("Event Starts in")}>
+          Event Starts in
+        </ListItem>
+      </List>
+      <List component='nav'>
+        <ListItem button onClick={() => console.log("Venue Info")}>
+          Venue Info
+        </ListItem>
+      </List>
+      <List component='nav'>
+        <ListItem button onClick={() => console.log("Highlights")}>
+          Highlights
+        </ListItem>
+      </List>
+      <List component='nav'>
+        <ListItem button onClick={() => console.log("Pricing")}>
+          Pricing
+        </ListItem>
+      </List>
+      <List component='nav'>
+        <ListItem button onClick={() => console.log("Location Info")}>
+          Location Info
         </ListItem>
       </List>
     </Drawer>
