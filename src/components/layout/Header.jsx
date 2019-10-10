@@ -5,7 +5,18 @@ import SideDrawer from "./sideDrawer"
 
 export default class Header extends React.Component {
   state = {
-    open: false
+    open: false,
+    header: false
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  handleScroll = () => {
+    window.scrollY > 0
+      ? this.setState({ header: true })
+      : this.setState({ header: false })
   }
   toggleClose = value => {
     this.setState({ open: value })
@@ -16,7 +27,7 @@ export default class Header extends React.Component {
       <AppBar
         position='fixed'
         style={{
-          backgroundColor: "#2f2f2f",
+          backgroundColor: this.state.header ? "#2f2f2f" : "transparent",
           boxShadow: "none",
           padding: "10px 0px"
         }}
