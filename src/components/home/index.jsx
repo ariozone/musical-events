@@ -1,5 +1,6 @@
 import React from "react"
 import Carrousel from "./Carrousel"
+import Countdown from "./Countdown"
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         {" "}
         <div className='wrapper'>Ariana Grande</div>
       </div>
+      <Countdown></Countdown>
     </div>
   )
 }
