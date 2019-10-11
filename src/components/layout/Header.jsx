@@ -13,9 +13,9 @@ export default class Header extends React.Component {
     window.addEventListener("scroll", this.handleScroll)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll")
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll")
+  // }
 
   handleScroll = () => {
     window.scrollY > 0
