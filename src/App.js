@@ -3,6 +3,7 @@ import "./App.css"
 import Header from "./components/layout/Header"
 import Home from "./components/home"
 import Info from "./components/info-section"
+import Highlights from "./components/info-section/highlights"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Home></Home>
       <Info></Info>
+      <Highlights></Highlights>
     </div>
   )
 }

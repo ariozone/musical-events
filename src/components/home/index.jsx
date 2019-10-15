@@ -8,7 +8,7 @@ const Home = () => {
       <Carrousel></Carrousel>
       <div className='artist_name'>
         {" "}
-        <div className='wrapper'>Ariana Grande</div>
+        <div className='wrapper'>Taylor Swift</div>
       </div>
       <Countdown></Countdown>
     </div>
