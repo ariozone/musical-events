@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Fade, Slide } from "react-reveal"
+import PurchaseButton from "../common/Button"
 
 const Discount = () => {
   const [discountStart, setDiscountStart] = useState(0)
@@ -13,7 +14,7 @@ const Discount = () => {
     setTimeout(() => {
       loadPercentage()
     }, 50)
-  }, [discountStart])
+  }, [loadPercentage, discountStart])
 
   return (
     <div className='center_wrapper'>
@@ -36,7 +37,7 @@ const Discount = () => {
               a unique access code. This text would come anywhere from 2-4 hours
               prior to the presale at 10 am local time.
             </p>
-            <button>Purchase Now</button>
+            <PurchaseButton></PurchaseButton>
           </div>
         </Slide>
       </div>
