@@ -1,5 +1,6 @@
 import React from "react"
 import PurchaseButton from "../common/Button"
+import { Zoom } from "react-reveal"
 
 class Pricing extends React.Component {
   state = {
@@ -41,22 +42,25 @@ class Pricing extends React.Component {
           "Currently, Official Platinum Seats are not available for all events. Be sure to check back often as new events are continually being added."
       }
     ],
-    link: ["https://www1.ticketmaster.com/event/0A00574B4DB65B04"]
+
+    delay: [0, 250, 500, 250, 500, 750]
   }
   renderSeat = () =>
-    this.state.seats.map(seat => (
-      <div className='pricing_item' key={seat.price}>
-        <div className='pricing_inner_wrapper'>
-          <div className='pricing_title'>
-            <span>${seat.price}</span>
-            <span>{seat.position}</span>
-          </div>
-          <div className='pricing_description'>{seat.description}</div>
-          <div className='pricing_buttons'>
-            <PurchaseButton></PurchaseButton>
+    this.state.seats.map((seat, index) => (
+      <Zoom key={seat.price} delay={this.state.delay[index]}>
+        <div className='pricing_item'>
+          <div className='pricing_inner_wrapper'>
+            <div className='pricing_title'>
+              <span>${seat.price}</span>
+              <span>{seat.position}</span>
+            </div>
+            <div className='pricing_description'>{seat.description}</div>
+            <div className='pricing_buttons'>
+              <PurchaseButton></PurchaseButton>
+            </div>
           </div>
         </div>
-      </div>
+      </Zoom>
     ))
   render() {
     return (
