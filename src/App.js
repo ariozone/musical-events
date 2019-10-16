@@ -5,6 +5,7 @@ import Home from "./components/home"
 import Info from "./components/info-section"
 import Highlights from "./components/info-section/highlights"
 import Pricing from "./components/info-section/pricing"
+import Location from "./components/info-section/location"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Info></Info>
       <Highlights></Highlights>
       <Pricing></Pricing>
+      <Location></Location>
     </div>
   )
 }
