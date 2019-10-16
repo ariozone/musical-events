@@ -4,6 +4,7 @@ import Header from "./components/layout/Header"
 import Home from "./components/home"
 import Info from "./components/info-section"
 import Highlights from "./components/info-section/highlights"
+import Pricing from "./components/info-section/pricing"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home></Home>
       <Info></Info>
       <Highlights></Highlights>
+      <Pricing></Pricing>
     </div>
   )
 }
