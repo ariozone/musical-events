@@ -1,6 +1,7 @@
 import React from "react"
 import Carrousel from "./Carrousel"
 import Countdown from "./Countdown"
+import { Zoom } from "react-reveal"
 
 const Home = () => {
   return (
@@ -8,7 +9,9 @@ const Home = () => {
       <Carrousel></Carrousel>
       <div className='artist_name'>
         {" "}
-        <div className='wrapper'>Taylor Swift</div>
+        <Zoom>
+          <div className='wrapper'>Taylor Swift</div>
+        </Zoom>
       </div>
       <Countdown></Countdown>
     </div>
