@@ -41,7 +41,9 @@ export default class Header extends React.Component {
             <div className='font_righteous ' style={{ fontSize: "40px" }}>
               Musical Events
             </div>
-            <div className='header_logo_title'>Enjoy The Music</div>
+            <div className='header_logo_title'>
+              Taylor Swift Lover Fest West at SoFi Stadium
+            </div>
           </div>
 
           <IconButton

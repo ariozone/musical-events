@@ -39,7 +39,7 @@ class Pricing extends React.Component {
         price: 180,
         position: "Economy",
         description:
-          "Currently, Official Platinum Seats are not available for all events. Be sure to check back often as new events are continually being added."
+          "Currently, Official Platinum Seats are not available for all events. Be sure to check back often as new events are continually being added. The price you pay is the original price of the ticket."
       }
     ],
 
@@ -51,8 +51,9 @@ class Pricing extends React.Component {
         <div className='pricing_item'>
           <div className='pricing_inner_wrapper'>
             <div className='pricing_title'>
-              <span>${seat.price}</span>
               <span>{seat.position}</span>
+              <span>${seat.price}</span>
+              <div className=' pricing_description '>Starts at</div>
             </div>
             <div className='pricing_description'>{seat.description}</div>
             <div className='pricing_buttons'>
@@ -67,6 +68,7 @@ class Pricing extends React.Component {
       <div className='bck_black'>
         <div className='center_wrapper pricing_section'>
           <h2>Pricing</h2>
+
           <div className='pricing_wrapper'>{this.renderSeat()}</div>
         </div>
       </div>

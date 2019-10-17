@@ -18,7 +18,7 @@ const Info = () => {
                     style={{ background: `url(${icon_calendar})` }}
                   ></div>
                   <div className='vn_title'>Event Date and Time</div>
-                  <div className='vn_desc'>4 January 2020 at 9 pm</div>
+                  <div className='vn_desc'>Sun • Jul 26, 2020 at 7:00 PM</div>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Info = () => {
                     style={{ background: `url(${icon_location})` }}
                   ></div>
                   <div className='vn_title'>Event Location</div>
-                  <div className='vn_desc'>Segerstrom Center of the Arts</div>
+                  <div className='vn_desc'>SoFi Stadium, Inglewood, CA </div>
                 </div>
               </div>
             </div>
