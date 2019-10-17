@@ -1,5 +1,6 @@
 import React from "react"
 import "./App.css"
+import { Element } from "react-scroll"
 import Header from "./components/layout/Header"
 import Home from "./components/home"
 import Info from "./components/info-section"
@@ -12,11 +13,21 @@ function App() {
   return (
     <div className='App' style={{ height: "1500px", background: "red" }}>
       <Header />
-      <Home></Home>
-      <Info></Info>
-      <Highlights></Highlights>
-      <Pricing></Pricing>
-      <Location></Location>
+      <Element name='EventStarts'>
+        <Home />>
+      </Element>
+      <Element name='VenueInfo'>
+        <Info></Info>
+      </Element>
+      <Element name='Highlights'>
+        <Highlights></Highlights>
+      </Element>
+      <Element name='Pricing'>
+        <Pricing></Pricing>
+      </Element>
+      <Element name='LocationInfo'>
+        <Location></Location>
+      </Element>
       <Footer></Footer>
     </div>
   )

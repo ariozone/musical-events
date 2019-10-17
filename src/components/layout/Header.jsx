@@ -55,7 +55,7 @@ export default class Header extends React.Component {
           </IconButton>
           <SideDrawer
             open={this.state.open}
-            onClose={() => this.toggleClose(true)}
+            onClose={() => this.toggleClose(false)}
           ></SideDrawer>
         </Toolbar>
       </AppBar>
