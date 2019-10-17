@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react"
+import React from "react"
 import { Fade, Slide } from "react-reveal"
 import PurchaseButton from "../common/Button"
 

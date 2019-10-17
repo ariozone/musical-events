@@ -1,53 +1,14 @@
 import React from "react"
 import PurchaseButton from "../common/Button"
+import ticketInfo from "../../resources/ticketInfo"
 import { Zoom } from "react-reveal"
 
-class Pricing extends React.Component {
-  state = {
-    seats: [
-      {
-        price: 800,
-        position: "Floor",
-        description:
-          "Official Platinum Seats are premium tickets to concerts and other events made available by artists and event providers through Ticketmaster. They give fans fair and safe access to some of the best seats in the house."
-      },
-      {
-        price: 550,
-        position: "VIP",
-        description:
-          "Official Platinum Seats are premium tickets to concerts and other events made available by artists and event providers through Ticketmaster. They give fans fair and safe access to some of the best seats in the house."
-      },
-      {
-        price: 350,
-        position: "Club 1",
-        description:
-          "The price you pay is the original price of the ticket. Official Platinum Seats were not purchased initially and then posted for resale; they are being sold for the first time through Ticketmaster on behalf of the artist or event provider."
-      },
-      {
-        price: 300,
-        position: "Club 2",
-        description:
-          "Official Platinum Seats are premium tickets to concerts and other events made available by artists and event providers through Ticketmaster. They give fans fair and safe access to some of the best seats in the house."
-      },
-      {
-        price: 250,
-        position: "Stadium",
-        description:
-          "The price you pay is the original price of the ticket. Official Platinum Seats were not purchased initially and then posted for resale; they are being sold for the first time through Ticketmaster on behalf of the artist or event provider."
-      },
-      {
-        price: 180,
-        position: "Economy",
-        description:
-          "The price you pay is the original price of the ticket. Official Platinum Seats were not purchased initially and then posted for resale; they are being sold for the first time through Ticketmaster on behalf of the artist or event provider."
-      }
-    ],
-
-    delay: [0, 250, 500, 250, 500, 750]
-  }
-  renderSeat = () =>
-    this.state.seats.map((seat, index) => (
-      <Zoom key={seat.price} delay={this.state.delay[index]}>
+const Pricing = () => {
+  const seats = ticketInfo()
+  const delay = [0, 250, 500, 250, 500, 750]
+  const renderSeat = () =>
+    seats.map((seat, index) => (
+      <Zoom key={seat.price} delay={delay[index]}>
         <div className='pricing_item'>
           <div className='pricing_inner_wrapper'>
             <div className='pricing_title'>
@@ -62,17 +23,16 @@ class Pricing extends React.Component {
         </div>
       </Zoom>
     ))
-  render() {
-    return (
-      <div className='bck_black'>
-        <div className='center_wrapper pricing_section'>
-          <h2>Pricing</h2>
 
-          <div className='pricing_wrapper'>{this.renderSeat()}</div>
-        </div>
+  return (
+    <div className='bck_black'>
+      <div className='center_wrapper pricing_section'>
+        <h2>Pricing</h2>
+
+        <div className='pricing_wrapper'>{renderSeat()}</div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Pricing
