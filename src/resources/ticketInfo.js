@@ -14,13 +14,13 @@ const ticketsInfo = () => {
     },
     {
       price: 350,
-      position: "Club 1",
+      position: "Club 100",
       description:
         "The price you pay is the original price of the ticket. Official Platinum Seats were not purchased initially and then posted for resale; they are being sold for the first time through Ticketmaster on behalf of the artist or event provider."
     },
     {
       price: 300,
-      position: "Club 2",
+      position: "Club 200",
       description:
         "Official Platinum Seats are premium tickets to concerts and other events made available by artists and event providers through Ticketmaster. They give fans fair and safe access to some of the best seats in the house."
     },

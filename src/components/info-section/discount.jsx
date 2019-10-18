@@ -2,20 +2,6 @@ import React from "react"
 import { Fade, Slide } from "react-reveal"
 import PurchaseButton from "../common/Button"
 
-// const Discount = () => {
-//   const [discountStart, setDiscountStart] = useState(0)
-//   const [discountEnd] = useState(35)
-
-//   const loadPercentage = useCallback(() => {
-//     discountStart < discountEnd && setDiscountStart(discountStart + 1)
-//   }, [discountStart, discountEnd])
-
-//   useEffect(() => {
-//     setTimeout(() => {
-//       loadPercentage()
-//     }, 30)
-//   }, [loadPercentage])
-
 class Discount extends React.Component {
   state = {
     discountEnd: 35,
@@ -31,12 +17,13 @@ class Discount extends React.Component {
       this.setState({ discountStart: this.state.discountStart + 1 })
   }
   render() {
+    const { discountStart } = this.state
     return (
       <div className='center_wrapper'>
         <div className='discount_wrapper'>
           <Fade onReveal={() => this.loadPercentage()}>
             <div className='discount_percentage'>
-              <span>{this.state.discountStart}%</span>
+              <span>{discountStart}%</span>
               <span>OFF</span>
             </div>
           </Fade>
