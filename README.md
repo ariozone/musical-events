@@ -1,3 +1,36 @@
+# Musical Events
+
+ A static version of a React app that presents information about future musical events.
+ 
+ ### [Live Demo](https://musical-events.surge.sh)
+ 
+ 
+## Technologies
+- React.js
+- JavaScript
+- Material UI
+- React Reveal
+- React Scroll
+- React Slick
+- React Hooks
+- HTML5
+- CSS3
+
+## Usage
+Clone and install dependencies.
+```
+git clone https://github.com/ariozone/musical-events.git
+cd musical-events/
+npm install
+```
+Run the app
+```
+npm start
+```
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
