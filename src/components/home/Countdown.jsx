@@ -2,13 +2,14 @@ import React from "react"
 import Slide from "react-reveal/Slide"
 
 const Countdown = () => {
-  const [stops] = React.useState("Jul, 26, 2020")
+  const stops = "Jul, 26, 2020"
+  //const [stops] = React.useState("Jul, 26, 2020")
   const [days, setDays] = React.useState(0)
   const [hours, setHours] = React.useState(0)
   const [minutes, setMinutes] = React.useState(0)
   const [seconds, setSeconds] = React.useState(0)
 
-  React.useState(() => {
+  React.useEffect(() => {
     setInterval(() => getCountdownTime(stops), 1000)
   }, [])
 

@@ -14,7 +14,7 @@ function App() {
     <div className='App' style={{ height: "1500px", background: "red" }}>
       <Header />
       <Element name='EventStarts'>
-        <Home />
+        <Home></Home>
       </Element>
       <Element name='VenueInfo'>
         <Info></Info>
